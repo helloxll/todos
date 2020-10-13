@@ -1,0 +1,54 @@
+/* pages/todos/todos.wxss */
+page{
+    height: 100%;
+}
+.root{
+    height: 100%;
+    border-top: 1rpx solid #e0e0e0;
+}
+.search{
+    align-items: center;
+    margin: 20rpx;
+    border: 1rpx solid #e0e0e0;
+    border-radius: 5rpx;
+    box-shadow: 0 0 5rpx #e0e0e0;
+    display: flex;
+}
+.search image{
+    width: 80rpx;
+    height: 80rpx;
+    margin-right: 20rpx;
+}
+.todos{
+    margin: 20rpx;
+    border: 1rpx solid #e0e0e0;
+    border-radius: 5rpx;
+}
+.todos .item{
+    display: flex;
+    padding: 20rpx;
+    align-items: center;
+    border-bottom: 1rpx solid #e0e0e0;
+}
+.todos .item text.completed{
+    color: #888;
+    text-decoration: line-through;
+}
+.todos .item:last-child{
+    border-bottom: 0;
+}
+.todos .item text{
+    flex:1;
+    margin-left: 20rpx;
+    font-size: 35rpx;
+}
+.todos .item icon{
+    height: 100%;
+}
+
+.footer{
+    display: flex;
+    margin: 20rpx;
+    justify-content: space-between;
+    font-size: 30rpx;
+}

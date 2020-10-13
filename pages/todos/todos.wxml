@@ -1,0 +1,28 @@
+<!--pages/todos/todos.wxml-->
+<view class="root">
+    <view class="search">
+        <image bindtap="plus_click" src="../../image/plus.png"></image>
+        <input bindconfirm="plus_click" bindinput="input_change" value="{{search}}" type="text"
+            placeholder="Anything here..." />
+    </view>
+    <block wx:if="{{todos.length}}">
+        <view class="todos">
+            <view class="item" wx:for="{{todos}}" wx:key="*this">
+                <icon bindtap="status_change_click" data-index="{{index}}" type="{{item.completed?'success':'circle'}}">
+                </icon>
+                <text class="{{item.completed?'completed':''}}">{{item.name}}</text>
+                <icon type="clear" bindtap="remove_click" data-index="{{index}}"></icon>
+            </view>
+        </view>
+        <view class="footer">
+            <text bindtap="all_completed_click">Toggle all</text>
+            <text wx:if="{{left_time}}">{{left_time}} {{left_time>1?'itmes':"item"}} left</text>
+            <text bindtap="clear_click">clear completed</text>
+        </view>
+    </block>
+    <view wx:else>
+        <text>null</text>
+    </view>
+    <button bindtap="storage">click me</button>
+    <button bindtap="getstorage">click me inorder to getstorage</button>
+</view>
